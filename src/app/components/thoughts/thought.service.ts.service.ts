@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Thought } from '../thought';
 
 @Injectable({
@@ -14,8 +15,8 @@ export class ThoughtService {
     return this.http.get<Thought[]>(this.API);
   }
 
-  create(thought: Thought) {
-    return this.http.post(this.API, thought);
+  create(thought: Thought): Observable<Thought> {
+    return this.http.post<Thought>(this.API, thought);
   }
 
   delete(id: number) {

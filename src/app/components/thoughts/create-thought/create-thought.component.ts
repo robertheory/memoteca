@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ThoughtService } from '../thought.service.ts.service';
 import { Thought } from './../../thought';
 
 @Component({
@@ -8,21 +10,22 @@ import { Thought } from './../../thought';
 })
 export class CreateThoughtComponent implements OnInit {
   pensamento: Thought = {
-    id: 1,
     conteudo: 'Aprendendo Angular',
     autoria: 'Dev',
     modelo: 'modelo1',
   };
 
-  constructor() {}
+  constructor(private service: ThoughtService, private router: Router) {}
 
   ngOnInit(): void {}
 
   createThought() {
-    alert('Novo pensamento criado!');
+    this.service
+      .create(this.pensamento)
+      .subscribe(() => this.router.navigate(['/listarPensamentos']));
   }
 
   cancel() {
-    alert('Novo pensamento criado!');
+    this.router.navigate(['/listarPensamentos']);
   }
 }

@@ -19,15 +19,21 @@ export class ThoughtService {
     return this.http.post<Thought>(this.API, thought);
   }
 
-  delete(id: number) {
-    return this.http.delete(`${this.API}/${id}`);
+  delete(id: number): Observable<Thought> {
+    const deleteURL = `${this.API}/${id}`;
+
+    return this.http.delete<Thought>(deleteURL);
   }
 
-  update(thought: Thought) {
-    return this.http.put(`${this.API}/${thought.id}`, thought);
+  update(thought: Thought): Observable<Thought> {
+    const updateURL = `${this.API}/${thought.id}`;
+
+    return this.http.put<Thought>(updateURL, thought);
   }
 
-  read(id: number) {
-    return this.http.get<Thought>(`${this.API}/${id}`);
+  read(id: number): Observable<Thought> {
+    const readURL = `${this.API}/${id}`;
+
+    return this.http.get<Thought>(readURL);
   }
 }

@@ -7,7 +7,7 @@ import { Thought } from '../../thought';
   styleUrls: ['./thought.component.css'],
 })
 export class ThoughtComponent implements OnInit {
-  @Input() pensamento: Omit<Thought, 'id'> = {
+  @Input() pensamento: Thought = {
     conteudo: 'I love Angular',
     autoria: 'Nay',
     modelo: 'modelo3',

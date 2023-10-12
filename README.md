@@ -18,6 +18,8 @@ Node.js: É necessário ter o Node.js instalado em seu sistema. Você pode baix�
 
 Git: Se você ainda não tiver o Git instalado, faça o download e siga as instruções em git-scm.com.
 
+Yarn: É necessário ter o Yarn instalado em seu sistema. Você pode baixá-lo em yarnpkg.com.
+
 Como Executar o Projeto
 Siga as etapas abaixo para executar o projeto MemoTeca em seu ambiente de desenvolvimento:
 
@@ -40,6 +42,12 @@ Instale as dependências do projeto usando o npm:
 ```bash
 npm install
 ```
+
+Antes de iniciar o projeto frontend, inicie o backend (`json-server`):
+
+- Acesse a pasta `backend`
+- Instale as dependencias com `yarn install`
+- Inicie o servidor com `yarn start`
 
 Inicie o servidor de desenvolvimento Angular:
 

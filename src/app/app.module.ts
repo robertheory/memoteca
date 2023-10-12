@@ -11,6 +11,7 @@ import { CreateThoughtComponent } from './components/thoughts/create-thought/cre
 import { ListThoughtComponent } from './components/thoughts/list-thought/list-thought.component';
 import { ThoughtComponent } from './components/thoughts/thought/thought.component';
 import { DeleteThoughtComponent } from './components/thoughts/delete-thought/delete-thought.component';
+import { UpdateThoughtComponent } from './components/thoughts/update-thought/update-thought.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { DeleteThoughtComponent } from './components/thoughts/delete-thought/del
     ListThoughtComponent,
     ThoughtComponent,
     DeleteThoughtComponent,
+    UpdateThoughtComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

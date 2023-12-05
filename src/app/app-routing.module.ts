@@ -1,36 +1,37 @@
+import { CriarPensamentoComponent } from './componentes/pensamentos/criar-pensamento/criar-pensamento.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CreateThoughtComponent } from './components/thoughts/create-thought/create-thought.component';
-import { DeleteThoughtComponent } from './components/thoughts/delete-thought/delete-thought.component';
-import { ListThoughtComponent } from './components/thoughts/list-thought/list-thought.component';
-import { UpdateThoughtComponent } from './components/thoughts/update-thought/update-thought.component';
+import { ListarPensamentoComponent } from './componentes/pensamentos/listar-pensamento/listar-pensamento.component';
+import { ExcluirPensamentoComponent } from './componentes/pensamentos/excluir-pensamento/excluir-pensamento.component';
+import { EditarPensamentoComponent } from './componentes/pensamentos/editar-pensamento/editar-pensamento.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'listarPensamentos',
-    pathMatch: 'full',
+    redirectTo: 'listarPensamento',
+    pathMatch: 'full'
   },
   {
     path: 'criarPensamento',
-    component: CreateThoughtComponent,
+    component: CriarPensamentoComponent
   },
   {
-    path: 'listarPensamentos',
-    component: ListThoughtComponent,
+    path: 'listarPensamento',
+    component: ListarPensamentoComponent
   },
   {
     path: 'pensamentos/excluirPensamento/:id',
-    component: DeleteThoughtComponent,
+    component: ExcluirPensamentoComponent
   },
   {
     path: 'pensamentos/editarPensamento/:id',
-    component: UpdateThoughtComponent,
-  },
+    component: EditarPensamentoComponent
+  }
+
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

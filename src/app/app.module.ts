@@ -1,31 +1,36 @@
-import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { HeaderComponent } from './components/header/header.component';
-import { CreateThoughtComponent } from './components/thoughts/create-thought/create-thought.component';
-import { ListThoughtComponent } from './components/thoughts/list-thought/list-thought.component';
-import { ThoughtComponent } from './components/thoughts/thought/thought.component';
-import { DeleteThoughtComponent } from './components/thoughts/delete-thought/delete-thought.component';
-import { UpdateThoughtComponent } from './components/thoughts/update-thought/update-thought.component';
+import { CabecalhoComponent } from './componentes/cabecalho/cabecalho.component';
+import { RodapeComponent } from './componentes/rodape/rodape.component';
+import { CriarPensamentoComponent } from './componentes/pensamentos/criar-pensamento/criar-pensamento.component';
+import { ListarPensamentoComponent } from './componentes/pensamentos/listar-pensamento/listar-pensamento.component';
+import { PensamentoComponent } from './componentes/pensamentos/pensamento/pensamento.component';
+import { ExcluirPensamentoComponent } from './componentes/pensamentos/excluir-pensamento/excluir-pensamento.component';
+import { EditarPensamentoComponent } from './componentes/pensamentos/editar-pensamento/editar-pensamento.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    CreateThoughtComponent,
-    ListThoughtComponent,
-    ThoughtComponent,
-    DeleteThoughtComponent,
-    UpdateThoughtComponent,
+    CabecalhoComponent,
+    RodapeComponent,
+    CriarPensamentoComponent,
+    ListarPensamentoComponent,
+    PensamentoComponent,
+    ExcluirPensamentoComponent,
+    EditarPensamentoComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
+  ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

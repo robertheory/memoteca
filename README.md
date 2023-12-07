@@ -1,6 +1,6 @@
 # Memoteca
 
-### Descrição do Projeto
+## Descrição do Projeto
 
 O projeto "MemoTeca" é um aplicativo desenvolvido em Angular que oferece a você a oportunidade de criar e gerenciar um mural de pensamentos. Com o MemoTeca, você pode armazenar citações de livros, trechos de músicas e frases inspiradoras, que podem ser usados como legendas em suas selfies ou simplesmente para guardar suas ideias favoritas.
 
